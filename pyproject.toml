@@ -1,0 +1,9 @@
+[project]
+name = "talent-finder"
+version = "0.1.0"
+description = "MCP server that finds and ranks LinkedIn candidates for a job description"
+requires-python = ">=3.11"
+dependencies = ["mcp", "openai", "psycopg[binary]", "pydantic"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

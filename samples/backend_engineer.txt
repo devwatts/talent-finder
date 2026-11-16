@@ -1,0 +1,98 @@
+Senior Back-End Software Engineer
+Company: Light & Wonder
+Location: Pune Division, Maharashtra, India
+Seniority level: Mid-Senior level
+Employment type: Full-time
+Industries: Gambling Facilities and Casinos
+Source: https://in.linkedin.com/jobs/view/senior-back-end-software-engineer-at-light-wonder-4416247487
+
+iGaming:
+
+If it’s iGaming, we know a thing or two. At Light & Wonder, It’s all about the games, and our digital team leads the global iGaming market, providing jaw-dropping content and innovative software that powers the world's most successful online gaming providers.
+
+Position Summary
+
+About Company
+
+Light & Wonder is a global leader in game experiences. We create content, hardware and systems that connect iconic titles across any place or channel. By turning games into expansive entertainment, we keep thrilling players with characters and stories they can’t get enough of.
+
+Light & Wonder, Inc. is the leading cross-platform global games company. Through our three unique, yet highly complementary business segments, we deliver unforgettable experiences by combining the exceptional talents of our 7,500+ member team, with a deep understanding of our customers and players. We create immersive content that forges lasting connections with players, wherever they choose to engage. At Light & Wonder, it’s all about the games. The Company is committed to the highest standards of integrity, from promoting player responsibility to implementing sustainable practices. To learn more visit www.lnw.com.
+
+We are committed to offering very competitive benefits that are aligned with our values and inspire employees to drive innovation and contribute to the organization’s performance. Employees are the most valued resource, and we always look to improve their well-being with a wide range of benefits befitting every individual. Not limited to monetary benefits, we have robust learning and development opportunities that help them to grow professionally.
+
+Our Values
+
+
+Dare to be bold: We combine diverse talent to look at the familiar in unfamiliar ways.
+Celebrate perspectives - We combine diverse talent to look at the familiar in unfamiliar ways
+Never settle: We relentlessly push forward to create the extraordinary in every detail.
+Uphold integrity: We promote accountability and respect to raise the bar for ourselves and the industry.
+Win as a team: We bring out the best in each other to share collective success.
+
+
+
+Senior Back-End Software Engineer- Java
+
+
+Job Location: Commerzone IT Tech Park, Yerwada - Pune.
+Required Experience: 6-10 years
+Employment Type: Full-time
+
+
+
+Education:
+
+
+BE/B.Tech in Computer Science, IT, or related field
+MCA (Computer Science/Application)
+
+
+
+Key Responsibilities
+
+
+Design, develop, and enhance microservice-based backend systems using Java, Spring Boot, and Hibernate/JPA.
+Collaborate closely with product and architecture teams to design scalable and fault-tolerant systems.
+Build, test, and maintain RESTful APIs for high-performance applications.
+Work with relational databases (MySǪL, PostgreSǪL) — design schemas, optimize queries, and ensure data consistency.
+Implement unit and integration tests to ensure product reliability and maintain high code quality.
+Participate in code reviews, design discussions, and architectural decisions.
+Deploy and monitor applications in cloud environments (AWS).
+Identify performance bottlenecks and optimize system performance.
+Contribute to continuous improvement of product architecture, automation, and development processes.
+
+
+
+Required Skills
+
+
+6–9 years of experience in Java backend development.
+Strong understanding of Core Java (OOPs, Collections, Streams, Exception Handling, Multi-threading).
+Deep experience with Spring, Spring Boot, JPA/Hibernate.
+Hands-on experience with REST APIs and microservice design patterns.
+Proficiency in MySǪL or PostgreSǪL, including performance tuning and query optimization.
+Strong understanding of software design principles (SOLID, Clean Code).
+Experience with unit testing frameworks like JUnit and Mockito.
+Familiarity with AWS services (EC2, S3, RDS, Lambda, etc.).
+Good experience with Git, Maven/Gradle, and CI/CD pipelines.
+Exposure to Agile methodologies and product lifecycle development.
+
+
+
+Good to Have
+
+
+Exposure to Docker or other containerisation tools.
+Familiarity with frontend frameworks like reactjs, Javascript, HTML, CSS
+Experience with SonarǪube, JaCoCo, or similar code quality tools.
+Basic understanding of DevOps pipelines.
+
+
+
+Soft Skills
+
+
+Strong problem-solving and analytical skills.
+Product-oriented mindset with focus on scalability and user impact.
+Excellent collaboration and communication skills.
+Ownership-driven and proactive attitude towards challenges.

@@ -1,0 +1,39 @@
+20 roles, 320 profiles. Too few profiles found for: none
+The judge agrees with itself across two shuffled runs at 0.93
+
+approach                         rank agreement  top-5 quality  best on
+model gives one score                      0.86           0.96        8
+model ranks the list                       0.85           0.96       10
+pipeline (facts, code decides)             0.65           0.89        1
+embedding similarity                       0.43           0.84        1
+keywords + years                           0.29           0.79        0
+
+rank agreement by role   pipeline  one score
+  account_executive             0.79       0.91
+  backend_engineer              0.74       0.97
+  civil_engineer                0.58       0.96
+  csm_stripe                    0.56       0.94
+  cybersecurity_analyst         0.92       0.94
+  data_engineer                 0.58       0.21
+  digital_marketing_manager     0.72       0.82
+  electrician                   0.46       0.95
+  financial_analyst             0.44       0.84
+  gtm_engineer                  0.51       0.79
+  hr_business_partner           0.71       0.88
+  mechanical_engineer           0.84       0.96
+  paralegal                     0.70       0.68
+  product_manager               0.42       0.88
+  registered_nurse              0.65       0.88
+  restaurant_general_manager    0.82       0.96
+  senior_accountant             0.27       0.93
+  supply_chain_manager          0.85       0.89
+  technical_recruiter           0.64       0.88
+  ux_designer                   0.72       0.85
+
+data engineer: share of yes/no pairs ordered as 10 human verdicts would have them
+  reference judge                  0.81
+  keywords + years                 0.50
+  embedding similarity             0.57
+  model gives one score            0.76
+  model ranks the list             0.71
+  pipeline (facts, code decides)   0.57

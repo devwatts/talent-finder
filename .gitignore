@@ -1,0 +1,6 @@
+.env
+.venv/
+__pycache__/
+benchmark/cache/
+benchmark/human_verdicts.json
+.pytest_cache/

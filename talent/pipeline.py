@@ -65,7 +65,7 @@ def save_rubric(search_id, version, rubric):
 def assess_profiles(search_id, profiles, stage):
     """Read every profile against the latest rubric and store the profile, the reading and the score."""
     jd, company, version, rubric = load(search_id)
-    kinds = employers.lookup(job["company"] for profile in profiles for job in profile["experience"])
+    kinds = employers.lookup(job for profile in profiles for job in profile["experience"])
 
     def read(profile):
         return scoring.assess(rubric, jd, company, employers.annotate(profile, kinds))

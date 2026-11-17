@@ -45,7 +45,7 @@ flowchart TD
         freeze --> kinds --> facts --> score
     end
 
-    memory[("Company memory<br/>each employer classified once")] <--> kinds
+    memory[("Company memory<br/>each employer classified once,<br/>web search if not recognised")] <--> kinds
     score --> results
 
     subgraph s5["get_results and get_candidate"]
@@ -141,5 +141,5 @@ Profiles and judge rankings are cached locally and not committed. A fresh run se
 - The 30 / 30 / 40 weights are untuned.
 - Calibration has only been run with stand-in verdicts.
 - An empty search is not widened.
-- Company research needs an endpoint with the `web_search` tool. Without one it falls back to the JD and website text.
+- Web search (hiring company, unrecognised employers) needs an endpoint with the `web_search` tool. Without one, company research falls back to the JD and website text and those employers stay unknown.
 - Free Apify accounts: 25 profiles a run, 10 runs.

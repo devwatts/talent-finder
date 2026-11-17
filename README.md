@@ -31,7 +31,7 @@ flowchart TD
     subgraph s3["probe and calibrate (optional)"]
         probe["probe<br/>small search, scored with the draft rubric"]:::code
         verdicts(["Recruiter says yes or no on borderline profiles"]):::you
-        revise["calibrate<br/>rubric rewritten to agree with the recruiter"]:::model
+        revise["calibrate<br/>rubric revised to agree with the recruiter,<br/>bias check again"]:::model
         probe --> verdicts --> revise
     end
 
@@ -61,12 +61,12 @@ flowchart TD
     score -.-> store
     store -.-> results
 
-    classDef model fill:#fbeeda,stroke:#a85a0b,color:#3a2204
-    classDef code fill:#e5eafc,stroke:#2443c4,color:#0f1c5c
-    classDef you fill:#dcf2ea,stroke:#0b7559,color:#053527
+    classDef model fill:#ece7fd,stroke:#6246d6,color:#1c1a15
+    classDef code fill:#e0f3ea,stroke:#16794f,color:#1c1a15
+    classDef you fill:#fbe9da,stroke:#c9631c,color:#1c1a15
 ```
 
-Amber: model. Blue: code. Green: recruiter.
+Purple: model. Green: code. Orange: recruiter.
 
 ## Scoring
 

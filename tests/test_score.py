@@ -69,6 +69,7 @@ def test_trim_keeps_what_a_recruiter_reads():
         "about": "a" * 5000, "location": {"linkedinText": "Pune"}, "profilePicture": {"url": "..."},
         "skills": [{"name": "SQL"}] * 60,
         "experience": [{"position": "Engineer", "companyName": "Acme", "description": None,
+                            "companyLinkedinUrl": "linkedin.com/company/acme",
                         "startDate": {"text": "Jan 2020"}, "endDate": {"text": "Present"},
                         "companyLogo": {"url": "..."}}],
     }
@@ -78,5 +79,6 @@ def test_trim_keeps_what_a_recruiter_reads():
     assert len(profile["about"]) == 1500
     assert len(profile["skills"]) == 40
     assert "profilePicture" not in profile
-    assert profile["experience"][0] == {"title": "Engineer", "company": "Acme", "type": None, "from": "Jan 2020",
+    assert profile["experience"][0] == {"title": "Engineer", "company": "Acme",
+                                        "company_url": "linkedin.com/company/acme", "type": None, "from": "Jan 2020",
                                         "to": "Present", "duration": None, "description": ""}

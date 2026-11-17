@@ -40,6 +40,7 @@ def trim(raw: dict) -> dict:
         "experience": [{
             "title": job.get("position"),
             "company": job.get("companyName"),
+            "company_url": job.get("companyLinkedinUrl"),
             "type": job.get("employmentType"),
             "from": text(job.get("startDate")),
             "to": text(job.get("endDate")),

@@ -12,7 +12,7 @@ flowchart TD
 
     subgraph s1["start_search"]
         parse["Parse the JD<br/>what the person will do, deal-breakers, open questions"]:::model
-        company["Research the hiring company<br/>size, stage, industry"]:::model
+        company["Research the hiring company<br/>web search: size, stage, industry"]:::model
         parse --> company
     end
 
@@ -86,7 +86,7 @@ A contradicted deal-breaker scores 0. Level is judged from scope and kind of emp
 
 | Tool | What it does |
 |---|---|
-| `start_search` | Parses the JD, researches the company, returns open questions |
+| `start_search` | Parses the JD, researches the company with a web search, returns open questions |
 | `draft_rubric` | Drafts the rubric and search filters, runs the bias check, returns search cost |
 | `probe` | Small search; returns borderline profiles to judge (optional) |
 | `calibrate` | Revises the rubric from the recruiter's yes or no (optional) |
@@ -141,4 +141,5 @@ Profiles and judge rankings are cached locally and not committed. A fresh run se
 - The 30 / 30 / 40 weights are untuned.
 - Calibration has only been run with stand-in verdicts.
 - An empty search is not widened.
+- Company research needs an endpoint with the `web_search` tool. Without one it falls back to the JD and website text.
 - Free Apify accounts: 25 profiles a run, 10 runs.

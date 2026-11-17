@@ -12,3 +12,10 @@ def ask(prompt, schema, model=MODEL):
     reply = client.chat.completions.parse(
         model=model, messages=[{"role": "user", "content": prompt}], response_format=schema)
     return reply.choices[0].message.parsed
+
+
+def ask_with_search(prompt, schema, model=MODEL):
+    """Like `ask`, but the model can search the web first. Needs an endpoint with the web_search tool."""
+    reply = client.responses.parse(
+        model=model, input=prompt, tools=[{"type": "web_search"}], text_format=schema)
+    return reply.output_parsed

@@ -96,11 +96,8 @@ RECRUITER'S VERDICTS:
 {verdicts}"""
 
 
-def draft(jd: dict, company: dict, answers: str = "", previous: Rubric | None = None) -> tuple[Rubric, list[Flag]]:
-    """Draft the rubric, or redraft an earlier one, and drop whatever the bias check flags."""
-    earlier = f"\nREVISE THIS EARLIER DRAFT:\n{previous.model_dump_json()}\n" if previous else ""
-    rubric = ask(DRAFT.format(previous=earlier, jd=jd, company=company, answers=answers or "(none)"), Rubric)
-
+def without_bias(rubric: Rubric) -> tuple[Rubric, list[Flag]]:
+    """Run the bias check and drop the criteria it flags."""
     flags = ask(BIAS.format(rubric=rubric.model_dump_json(indent=1)), Flags).flags
     criteria_ids = {c.id for c in rubric.criteria}
     flags = [flag for flag in flags if flag.id in criteria_ids]    # it sometimes comments on a filter; only criteria are removed
@@ -109,5 +106,16 @@ def draft(jd: dict, company: dict, answers: str = "", previous: Rubric | None = 
     return rubric, flags
 
 
+def draft(jd: dict, company: dict, answers: str = "", previous: Rubric | None = None) -> tuple[Rubric, list[Flag]]:
+    """Draft the rubric, or redraft an earlier one, and drop whatever the bias check flags."""
+    earlier = f"\nREVISE THIS EARLIER DRAFT:\n{previous.model_dump_json()}\n" if previous else ""
+    rubric = ask(DRAFT.format(previous=earlier, jd=jd, company=company, answers=answers or "(none)"), Rubric)
+    return without_bias(rubric)
+
+
 def revise(rubric: Rubric, verdicts: str) -> Revision:
-    return ask(REVISE.format(rubric=rubric.model_dump_json(indent=1), verdicts=verdicts), Revision)
+    """Revise the rubric from the recruiter's verdicts. A verdict can carry bias, so it is checked again."""
+    revision = ask(REVISE.format(rubric=rubric.model_dump_json(indent=1), verdicts=verdicts), Revision)
+    revision.rubric, flags = without_bias(revision.rubric)
+    revision.changes += [f"Removed by the bias check: {flag.id}. {flag.reason}" for flag in flags]
+    return revision
